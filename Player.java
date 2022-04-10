@@ -60,26 +60,26 @@ public class Player {
         
     }
 
-    public int ask() {
+    private int ask() {
         System.out.println("Pass or Not(1/0): ");
         int response = input.nextInt();
 
         return response;
     }
 
-    public int card() {
+    private int card() {
         System.out.println("Pick the card: ");
         return number= input.nextInt(); 
     }
 
-    public int quantity(int number) {
+    private int quantity(int number) {
         System.out.println("How many: ");
         int quantity = input.nextInt();
         
         return quantity;
     }
 
-    public void playCards(int number, int quantity) {
+    private void playCards(int number, int quantity) {
         List <Integer> cards = new ArrayList<>();
         for (int t = 1; t <= quantity; t++){
             cards.add(number);
@@ -87,7 +87,7 @@ public class Player {
         }
     }
         
-    public void ace() {
+    private void ace() {
         if (number >= 14){
             begin.reset();
             play();
